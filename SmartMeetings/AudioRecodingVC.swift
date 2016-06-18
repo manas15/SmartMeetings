@@ -15,6 +15,7 @@ import SpeechToTextV1
 
 class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
+    @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var startStopRecordingButton: UIButton!
     @IBOutlet weak var playRecordingButton: UIButton!
     @IBOutlet weak var transcribeButton: UIButton!
@@ -30,6 +31,10 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
     var isStreamingCustom = false
     var stopStreamingCustom: (Void -> Void)? = nil
     var captureSession: AVCaptureSession? = nil
+    
+
+    var timer:NSTimer = NSTimer()
+    var totalNumOfSec: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +73,8 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         transcribeButton.enabled = false
         
         instantiateSTT()
+        
+
     }
     
     func instantiateSTT() {
@@ -101,7 +108,45 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         stt = SpeechToText(username: user, password: password)
     }
     
+    func eachSec() {
+        print(totalNumOfSec)
+        //update ui 
+        var hours = (totalNumOfSec / 3600)
+        var minutes = (totalNumOfSec/60 % 60)
+        var seconds = (totalNumOfSec % 60)
+        var hoursString : String!
+        var minutesString: String!
+        var secondsString : String!
+        if hours < 10 {
+            hoursString = "0\(hours)"
+        }
+        else {
+            hoursString = "\(hours)"
+        }
+
+        if minutes < 10 {
+            minutesString = "0\(minutes)"        }
+        else {
+            minutesString = "\(minutes)"
+        }
+
+        
+        if seconds < 10 {
+            secondsString = "0\(seconds)"
+        }
+        else {
+            secondsString = "\(seconds)"
+        }
+
+
+        timeLbl.text = String(hoursString + ":" + minutesString + ":" +  secondsString)        //update flag
+        totalNumOfSec++
+    }
+    
     @IBAction func startStopRecording() {
+        
+        
+        
         
         // ensure recorder is set up
         guard let recorder = recorder else {
@@ -111,10 +156,17 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         
         // stop playing previous recording
         if let player = player {
+            
             if (player.playing) {
                 player.stop()
             }
         }
+        
+        if (recorder.recording) {
+            timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(AudioRecodingVC.eachSec), userInfo: nil, repeats: true)
+            NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+        }
+
         
         // start/stop recording
         if (!recorder.recording) {
@@ -125,11 +177,20 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
                 startStopRecordingButton.setTitle("Stop Recording", forState: .Normal)
                 playRecordingButton.enabled = false
                 transcribeButton.enabled = false
+                
+                //Start Timer
+                
+                totalNumOfSec = 0
+                
+                timer.invalidate()
             } catch {
                 failure("Start/Stop Recording", message: "Error setting session active.")
             }
         } else {
             do {
+                
+//                timer.invalidate()
+                
                 recorder.stop()
                 let session = AVAudioSession.sharedInstance()
                 try session.setActive(false)
