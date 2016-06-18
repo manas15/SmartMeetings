@@ -29,6 +29,9 @@
 		19E180331D15BBD9004FE7C5 /* ToneAnalyzerV3.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801E1D15B65A004FE7C5 /* ToneAnalyzerV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19E180341D15BBD9004FE7C5 /* VisualRecognitionV3.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801F1D15B65A004FE7C5 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19E180661D15CDF0004FE7C5 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19E180651D15CDF0004FE7C5 /* Credentials.plist */; };
+		19E1806A1D15EA26004FE7C5 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E180691D15EA26004FE7C5 /* Recording.swift */; };
+		19E1806C1D15EB11004FE7C5 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1806B1D15EB11004FE7C5 /* Global.swift */; };
+		19E1806E1D15EDF2004FE7C5 /* MarkerRecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1806D1D15EDF2004FE7C5 /* MarkerRecordingVC.swift */; };
 		19F58E221D155EAE009663E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F58E211D155EAE009663E8 /* AppDelegate.swift */; };
 		19F58E271D155EAF009663E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E251D155EAF009663E8 /* Main.storyboard */; };
 		19F58E291D155EAF009663E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E281D155EAF009663E8 /* Assets.xcassets */; };
@@ -89,6 +92,9 @@
 		19E1801E1D15B65A004FE7C5 /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToneAnalyzerV3.framework; sourceTree = "<group>"; };
 		19E1801F1D15B65A004FE7C5 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VisualRecognitionV3.framework; sourceTree = "<group>"; };
 		19E180651D15CDF0004FE7C5 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
+		19E180691D15EA26004FE7C5 /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		19E1806B1D15EB11004FE7C5 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		19E1806D1D15EDF2004FE7C5 /* MarkerRecordingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerRecordingVC.swift; sourceTree = "<group>"; };
 		19F58E1E1D155EAE009663E8 /* SmartMeetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMeetings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F58E211D155EAE009663E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19F58E261D155EAF009663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,12 +186,15 @@
 			isa = PBXGroup;
 			children = (
 				19E180651D15CDF0004FE7C5 /* Credentials.plist */,
+				19E1806B1D15EB11004FE7C5 /* Global.swift */,
 				19F58E211D155EAE009663E8 /* AppDelegate.swift */,
 				19F58E251D155EAF009663E8 /* Main.storyboard */,
 				19F58E281D155EAF009663E8 /* Assets.xcassets */,
 				19F58E2A1D155EAF009663E8 /* LaunchScreen.storyboard */,
 				19F58E2D1D155EAF009663E8 /* Info.plist */,
 				19E180111D1574E3004FE7C5 /* AudioRecodingVC.swift */,
+				19E180691D15EA26004FE7C5 /* Recording.swift */,
+				19E1806D1D15EDF2004FE7C5 /* MarkerRecordingVC.swift */,
 			);
 			path = SmartMeetings;
 			sourceTree = "<group>";
@@ -341,7 +350,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E1806E1D15EDF2004FE7C5 /* MarkerRecordingVC.swift in Sources */,
+				19E1806C1D15EB11004FE7C5 /* Global.swift in Sources */,
 				19E180121D1574E3004FE7C5 /* AudioRecodingVC.swift in Sources */,
+				19E1806A1D15EA26004FE7C5 /* Recording.swift in Sources */,
 				19F58E221D155EAE009663E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

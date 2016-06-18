@@ -35,7 +35,7 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
     
 
     var timer:NSTimer = NSTimer()
-    var totalNumOfSec: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
