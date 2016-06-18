@@ -22,6 +22,7 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
     @IBOutlet weak var startStopStreamingDefaultButton: UIButton!
     @IBOutlet weak var startStopStreamingCustomButton: UIButton!
     @IBOutlet weak var transcriptionField: UITextView!
+    @IBOutlet weak var markerBtn: UIButton!
     
     var stt: SpeechToText?
     var player: AVAudioPlayer? = nil
@@ -163,6 +164,7 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         }
         
         if (recorder.recording) {
+            markerBtn.hidden = false
             timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(AudioRecodingVC.eachSec), userInfo: nil, repeats: true)
             NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
         }
@@ -171,6 +173,8 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         // start/stop recording
         if (!recorder.recording) {
             do {
+                
+                markerBtn.hidden = true
                 let session = AVAudioSession.sharedInstance()
                 try session.setActive(true)
                 recorder.record()
@@ -178,7 +182,7 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
                 playRecordingButton.enabled = false
                 transcribeButton.enabled = false
                 
-                //Start Timer
+                
                 
                 totalNumOfSec = 0
                 
@@ -314,4 +318,11 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         let first = String(s.characters.prefix(1)).uppercaseString
         return first + String(s.characters.dropFirst())
     }
+    
+  
+    @IBAction func onClickMarkerBtn(sender: AnyObject) {
+        
+        
+    }
+    
 }
