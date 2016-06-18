@@ -25,6 +25,12 @@ class MarkerRecordingVC: UIViewController {
     
     @IBAction func onClickDone(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+        if (inputTxtField != nil){
+            var recording = Recording(s: lastMarker, e: totalNumOfSec, t: inputTxtField.text!)
+            DataSource.append(recording)
+            print(DataSource)
+        }
+        
     }
     
     

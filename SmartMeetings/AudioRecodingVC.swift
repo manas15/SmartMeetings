@@ -322,7 +322,7 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
   
     @IBAction func onClickMarkerBtn(sender: AnyObject) {
         
-        
+        lastMarker = totalNumOfSec
     }
     
 }
