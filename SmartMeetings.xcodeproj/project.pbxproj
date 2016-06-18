@@ -7,8 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19E180121D1574E3004FE7C5 /* AudioRecodingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E180111D1574E3004FE7C5 /* AudioRecodingVC.swift */; };
+		19E180201D15B65A004FE7C5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E180161D15B659004FE7C5 /* Alamofire.framework */; };
+		19E180211D15B65A004FE7C5 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E180171D15B659004FE7C5 /* Freddy.framework */; };
+		19E180221D15B65A004FE7C5 /* LanguageTranslationV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E180181D15B659004FE7C5 /* LanguageTranslationV2.framework */; };
+		19E180231D15B65A004FE7C5 /* NaturalLanguageClassifierV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E180191D15B659004FE7C5 /* NaturalLanguageClassifierV1.framework */; };
+		19E180241D15B65A004FE7C5 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E1801A1D15B65A004FE7C5 /* RestKit.framework */; };
+		19E180251D15B65A004FE7C5 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E1801B1D15B65A004FE7C5 /* SpeechToTextV1.framework */; };
+		19E180261D15B65A004FE7C5 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E1801C1D15B65A004FE7C5 /* Starscream.framework */; };
+		19E180271D15B65A004FE7C5 /* TextToSpeechV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E1801D1D15B65A004FE7C5 /* TextToSpeechV1.framework */; };
+		19E180281D15B65A004FE7C5 /* ToneAnalyzerV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E1801E1D15B65A004FE7C5 /* ToneAnalyzerV3.framework */; };
+		19E180291D15B65A004FE7C5 /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E1801F1D15B65A004FE7C5 /* VisualRecognitionV3.framework */; };
+		19E1802B1D15BBD9004FE7C5 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E180161D15B659004FE7C5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E1802C1D15BBD9004FE7C5 /* Freddy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E180171D15B659004FE7C5 /* Freddy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E1802D1D15BBD9004FE7C5 /* LanguageTranslationV2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E180181D15B659004FE7C5 /* LanguageTranslationV2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E1802E1D15BBD9004FE7C5 /* NaturalLanguageClassifierV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E180191D15B659004FE7C5 /* NaturalLanguageClassifierV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E1802F1D15BBD9004FE7C5 /* RestKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801A1D15B65A004FE7C5 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E180301D15BBD9004FE7C5 /* SpeechToTextV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801B1D15B65A004FE7C5 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E180311D15BBD9004FE7C5 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801C1D15B65A004FE7C5 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E180321D15BBD9004FE7C5 /* TextToSpeechV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801D1D15B65A004FE7C5 /* TextToSpeechV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E180331D15BBD9004FE7C5 /* ToneAnalyzerV3.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801E1D15B65A004FE7C5 /* ToneAnalyzerV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E180341D15BBD9004FE7C5 /* VisualRecognitionV3.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19E1801F1D15B65A004FE7C5 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19E180661D15CDF0004FE7C5 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19E180651D15CDF0004FE7C5 /* Credentials.plist */; };
 		19F58E221D155EAE009663E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F58E211D155EAE009663E8 /* AppDelegate.swift */; };
-		19F58E241D155EAE009663E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F58E231D155EAE009663E8 /* ViewController.swift */; };
 		19F58E271D155EAF009663E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E251D155EAF009663E8 /* Main.storyboard */; };
 		19F58E291D155EAF009663E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E281D155EAF009663E8 /* Assets.xcassets */; };
 		19F58E2C1D155EAF009663E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E2A1D155EAF009663E8 /* LaunchScreen.storyboard */; };
@@ -33,10 +54,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		19E1802A1D15BBBC004FE7C5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				19E1802B1D15BBD9004FE7C5 /* Alamofire.framework in CopyFiles */,
+				19E1802C1D15BBD9004FE7C5 /* Freddy.framework in CopyFiles */,
+				19E1802D1D15BBD9004FE7C5 /* LanguageTranslationV2.framework in CopyFiles */,
+				19E1802E1D15BBD9004FE7C5 /* NaturalLanguageClassifierV1.framework in CopyFiles */,
+				19E1802F1D15BBD9004FE7C5 /* RestKit.framework in CopyFiles */,
+				19E180301D15BBD9004FE7C5 /* SpeechToTextV1.framework in CopyFiles */,
+				19E180311D15BBD9004FE7C5 /* Starscream.framework in CopyFiles */,
+				19E180321D15BBD9004FE7C5 /* TextToSpeechV1.framework in CopyFiles */,
+				19E180331D15BBD9004FE7C5 /* ToneAnalyzerV3.framework in CopyFiles */,
+				19E180341D15BBD9004FE7C5 /* VisualRecognitionV3.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		19E180111D1574E3004FE7C5 /* AudioRecodingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecodingVC.swift; sourceTree = "<group>"; };
+		19E180161D15B659004FE7C5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		19E180171D15B659004FE7C5 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Freddy.framework; sourceTree = "<group>"; };
+		19E180181D15B659004FE7C5 /* LanguageTranslationV2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LanguageTranslationV2.framework; sourceTree = "<group>"; };
+		19E180191D15B659004FE7C5 /* NaturalLanguageClassifierV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NaturalLanguageClassifierV1.framework; sourceTree = "<group>"; };
+		19E1801A1D15B65A004FE7C5 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RestKit.framework; sourceTree = "<group>"; };
+		19E1801B1D15B65A004FE7C5 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechToTextV1.framework; sourceTree = "<group>"; };
+		19E1801C1D15B65A004FE7C5 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
+		19E1801D1D15B65A004FE7C5 /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TextToSpeechV1.framework; sourceTree = "<group>"; };
+		19E1801E1D15B65A004FE7C5 /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ToneAnalyzerV3.framework; sourceTree = "<group>"; };
+		19E1801F1D15B65A004FE7C5 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VisualRecognitionV3.framework; sourceTree = "<group>"; };
+		19E180651D15CDF0004FE7C5 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
 		19F58E1E1D155EAE009663E8 /* SmartMeetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMeetings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F58E211D155EAE009663E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19F58E231D155EAE009663E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19F58E261D155EAF009663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19F58E281D155EAF009663E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19F58E2B1D155EAF009663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +108,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E180231D15B65A004FE7C5 /* NaturalLanguageClassifierV1.framework in Frameworks */,
+				19E180291D15B65A004FE7C5 /* VisualRecognitionV3.framework in Frameworks */,
+				19E180261D15B65A004FE7C5 /* Starscream.framework in Frameworks */,
+				19E180241D15B65A004FE7C5 /* RestKit.framework in Frameworks */,
+				19E180281D15B65A004FE7C5 /* ToneAnalyzerV3.framework in Frameworks */,
+				19E180271D15B65A004FE7C5 /* TextToSpeechV1.framework in Frameworks */,
+				19E180211D15B65A004FE7C5 /* Freddy.framework in Frameworks */,
+				19E180221D15B65A004FE7C5 /* LanguageTranslationV2.framework in Frameworks */,
+				19E180201D15B65A004FE7C5 /* Alamofire.framework in Frameworks */,
+				19E180251D15B65A004FE7C5 /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +138,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19E180151D15B5B5004FE7C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19E180161D15B659004FE7C5 /* Alamofire.framework */,
+				19E180171D15B659004FE7C5 /* Freddy.framework */,
+				19E180181D15B659004FE7C5 /* LanguageTranslationV2.framework */,
+				19E180191D15B659004FE7C5 /* NaturalLanguageClassifierV1.framework */,
+				19E1801A1D15B65A004FE7C5 /* RestKit.framework */,
+				19E1801B1D15B65A004FE7C5 /* SpeechToTextV1.framework */,
+				19E1801C1D15B65A004FE7C5 /* Starscream.framework */,
+				19E1801D1D15B65A004FE7C5 /* TextToSpeechV1.framework */,
+				19E1801E1D15B65A004FE7C5 /* ToneAnalyzerV3.framework */,
+				19E1801F1D15B65A004FE7C5 /* VisualRecognitionV3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		19F58E151D155EAE009663E8 = {
 			isa = PBXGroup;
 			children = (
+				19E180151D15B5B5004FE7C5 /* Frameworks */,
 				19F58E201D155EAE009663E8 /* SmartMeetings */,
 				19F58E351D155EAF009663E8 /* SmartMeetingsTests */,
 				19F58E401D155EAF009663E8 /* SmartMeetingsUITests */,
@@ -97,12 +179,13 @@
 		19F58E201D155EAE009663E8 /* SmartMeetings */ = {
 			isa = PBXGroup;
 			children = (
+				19E180651D15CDF0004FE7C5 /* Credentials.plist */,
 				19F58E211D155EAE009663E8 /* AppDelegate.swift */,
-				19F58E231D155EAE009663E8 /* ViewController.swift */,
 				19F58E251D155EAF009663E8 /* Main.storyboard */,
 				19F58E281D155EAF009663E8 /* Assets.xcassets */,
 				19F58E2A1D155EAF009663E8 /* LaunchScreen.storyboard */,
 				19F58E2D1D155EAF009663E8 /* Info.plist */,
+				19E180111D1574E3004FE7C5 /* AudioRecodingVC.swift */,
 			);
 			path = SmartMeetings;
 			sourceTree = "<group>";
@@ -135,6 +218,7 @@
 				19F58E1A1D155EAE009663E8 /* Sources */,
 				19F58E1B1D155EAE009663E8 /* Frameworks */,
 				19F58E1C1D155EAE009663E8 /* Resources */,
+				19E1802A1D15BBBC004FE7C5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -230,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19F58E2C1D155EAF009663E8 /* LaunchScreen.storyboard in Resources */,
+				19E180661D15CDF0004FE7C5 /* Credentials.plist in Resources */,
 				19F58E291D155EAF009663E8 /* Assets.xcassets in Resources */,
 				19F58E271D155EAF009663E8 /* Main.storyboard in Resources */,
 			);
@@ -256,7 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19F58E241D155EAE009663E8 /* ViewController.swift in Sources */,
+				19E180121D1574E3004FE7C5 /* AudioRecodingVC.swift in Sources */,
 				19F58E221D155EAE009663E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +486,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SmartMeetings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetings;
@@ -412,6 +501,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SmartMeetings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetings;
@@ -484,6 +577,7 @@
 				19F58E481D155EAF009663E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19F58E491D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetingsTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +586,7 @@
 				19F58E4B1D155EAF009663E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19F58E4C1D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetingsUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +595,7 @@
 				19F58E4E1D155EAF009663E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
