@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19F58E221D155EAE009663E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F58E211D155EAE009663E8 /* AppDelegate.swift */; };
+		19F58E241D155EAE009663E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F58E231D155EAE009663E8 /* ViewController.swift */; };
+		19F58E271D155EAF009663E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E251D155EAF009663E8 /* Main.storyboard */; };
+		19F58E291D155EAF009663E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E281D155EAF009663E8 /* Assets.xcassets */; };
+		19F58E2C1D155EAF009663E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F58E2A1D155EAF009663E8 /* LaunchScreen.storyboard */; };
+		19F58E371D155EAF009663E8 /* SmartMeetingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F58E361D155EAF009663E8 /* SmartMeetingsTests.swift */; };
+		19F58E421D155EAF009663E8 /* SmartMeetingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F58E411D155EAF009663E8 /* SmartMeetingsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19F58E331D155EAF009663E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19F58E161D155EAE009663E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19F58E1D1D155EAE009663E8;
+			remoteInfo = SmartMeetings;
+		};
+		19F58E3E1D155EAF009663E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19F58E161D155EAE009663E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19F58E1D1D155EAE009663E8;
+			remoteInfo = SmartMeetings;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19F58E1E1D155EAE009663E8 /* SmartMeetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMeetings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F58E211D155EAE009663E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19F58E231D155EAE009663E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19F58E261D155EAF009663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19F58E281D155EAF009663E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19F58E2B1D155EAF009663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19F58E2D1D155EAF009663E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19F58E321D155EAF009663E8 /* SmartMeetingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartMeetingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F58E361D155EAF009663E8 /* SmartMeetingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartMeetingsTests.swift; sourceTree = "<group>"; };
+		19F58E381D155EAF009663E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19F58E3D1D155EAF009663E8 /* SmartMeetingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartMeetingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F58E411D155EAF009663E8 /* SmartMeetingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartMeetingsUITests.swift; sourceTree = "<group>"; };
+		19F58E431D155EAF009663E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19F58E1B1D155EAE009663E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F58E2F1D155EAF009663E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F58E3A1D155EAF009663E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19F58E151D155EAE009663E8 = {
+			isa = PBXGroup;
+			children = (
+				19F58E201D155EAE009663E8 /* SmartMeetings */,
+				19F58E351D155EAF009663E8 /* SmartMeetingsTests */,
+				19F58E401D155EAF009663E8 /* SmartMeetingsUITests */,
+				19F58E1F1D155EAE009663E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19F58E1F1D155EAE009663E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19F58E1E1D155EAE009663E8 /* SmartMeetings.app */,
+				19F58E321D155EAF009663E8 /* SmartMeetingsTests.xctest */,
+				19F58E3D1D155EAF009663E8 /* SmartMeetingsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19F58E201D155EAE009663E8 /* SmartMeetings */ = {
+			isa = PBXGroup;
+			children = (
+				19F58E211D155EAE009663E8 /* AppDelegate.swift */,
+				19F58E231D155EAE009663E8 /* ViewController.swift */,
+				19F58E251D155EAF009663E8 /* Main.storyboard */,
+				19F58E281D155EAF009663E8 /* Assets.xcassets */,
+				19F58E2A1D155EAF009663E8 /* LaunchScreen.storyboard */,
+				19F58E2D1D155EAF009663E8 /* Info.plist */,
+			);
+			path = SmartMeetings;
+			sourceTree = "<group>";
+		};
+		19F58E351D155EAF009663E8 /* SmartMeetingsTests */ = {
+			isa = PBXGroup;
+			children = (
+				19F58E361D155EAF009663E8 /* SmartMeetingsTests.swift */,
+				19F58E381D155EAF009663E8 /* Info.plist */,
+			);
+			path = SmartMeetingsTests;
+			sourceTree = "<group>";
+		};
+		19F58E401D155EAF009663E8 /* SmartMeetingsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19F58E411D155EAF009663E8 /* SmartMeetingsUITests.swift */,
+				19F58E431D155EAF009663E8 /* Info.plist */,
+			);
+			path = SmartMeetingsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19F58E1D1D155EAE009663E8 /* SmartMeetings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19F58E461D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetings" */;
+			buildPhases = (
+				19F58E1A1D155EAE009663E8 /* Sources */,
+				19F58E1B1D155EAE009663E8 /* Frameworks */,
+				19F58E1C1D155EAE009663E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartMeetings;
+			productName = SmartMeetings;
+			productReference = 19F58E1E1D155EAE009663E8 /* SmartMeetings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19F58E311D155EAF009663E8 /* SmartMeetingsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19F58E491D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetingsTests" */;
+			buildPhases = (
+				19F58E2E1D155EAF009663E8 /* Sources */,
+				19F58E2F1D155EAF009663E8 /* Frameworks */,
+				19F58E301D155EAF009663E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19F58E341D155EAF009663E8 /* PBXTargetDependency */,
+			);
+			name = SmartMeetingsTests;
+			productName = SmartMeetingsTests;
+			productReference = 19F58E321D155EAF009663E8 /* SmartMeetingsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19F58E3C1D155EAF009663E8 /* SmartMeetingsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19F58E4C1D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetingsUITests" */;
+			buildPhases = (
+				19F58E391D155EAF009663E8 /* Sources */,
+				19F58E3A1D155EAF009663E8 /* Frameworks */,
+				19F58E3B1D155EAF009663E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19F58E3F1D155EAF009663E8 /* PBXTargetDependency */,
+			);
+			name = SmartMeetingsUITests;
+			productName = SmartMeetingsUITests;
+			productReference = 19F58E3D1D155EAF009663E8 /* SmartMeetingsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19F58E161D155EAE009663E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Manas Sharma";
+				TargetAttributes = {
+					19F58E1D1D155EAE009663E8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					19F58E311D155EAF009663E8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 19F58E1D1D155EAE009663E8;
+					};
+					19F58E3C1D155EAF009663E8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 19F58E1D1D155EAE009663E8;
+					};
+				};
+			};
+			buildConfigurationList = 19F58E191D155EAE009663E8 /* Build configuration list for PBXProject "SmartMeetings" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19F58E151D155EAE009663E8;
+			productRefGroup = 19F58E1F1D155EAE009663E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19F58E1D1D155EAE009663E8 /* SmartMeetings */,
+				19F58E311D155EAF009663E8 /* SmartMeetingsTests */,
+				19F58E3C1D155EAF009663E8 /* SmartMeetingsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19F58E1C1D155EAE009663E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F58E2C1D155EAF009663E8 /* LaunchScreen.storyboard in Resources */,
+				19F58E291D155EAF009663E8 /* Assets.xcassets in Resources */,
+				19F58E271D155EAF009663E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F58E301D155EAF009663E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F58E3B1D155EAF009663E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19F58E1A1D155EAE009663E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F58E241D155EAE009663E8 /* ViewController.swift in Sources */,
+				19F58E221D155EAE009663E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F58E2E1D155EAF009663E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F58E371D155EAF009663E8 /* SmartMeetingsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F58E391D155EAF009663E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F58E421D155EAF009663E8 /* SmartMeetingsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19F58E341D155EAF009663E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19F58E1D1D155EAE009663E8 /* SmartMeetings */;
+			targetProxy = 19F58E331D155EAF009663E8 /* PBXContainerItemProxy */;
+		};
+		19F58E3F1D155EAF009663E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19F58E1D1D155EAE009663E8 /* SmartMeetings */;
+			targetProxy = 19F58E3E1D155EAF009663E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19F58E251D155EAF009663E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F58E261D155EAF009663E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19F58E2A1D155EAF009663E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F58E2B1D155EAF009663E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19F58E441D155EAF009663E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19F58E451D155EAF009663E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19F58E471D155EAF009663E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmartMeetings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		19F58E481D155EAF009663E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmartMeetings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		19F58E4A1D155EAF009663E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SmartMeetingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartMeetings.app/SmartMeetings";
+			};
+			name = Debug;
+		};
+		19F58E4B1D155EAF009663E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SmartMeetingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartMeetings.app/SmartMeetings";
+			};
+			name = Release;
+		};
+		19F58E4D1D155EAF009663E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SmartMeetingsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SmartMeetings;
+			};
+			name = Debug;
+		};
+		19F58E4E1D155EAF009663E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SmartMeetingsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feather.SmartMeetingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SmartMeetings;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19F58E191D155EAE009663E8 /* Build configuration list for PBXProject "SmartMeetings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F58E441D155EAF009663E8 /* Debug */,
+				19F58E451D155EAF009663E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19F58E461D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F58E471D155EAF009663E8 /* Debug */,
+				19F58E481D155EAF009663E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		19F58E491D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetingsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F58E4A1D155EAF009663E8 /* Debug */,
+				19F58E4B1D155EAF009663E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		19F58E4C1D155EAF009663E8 /* Build configuration list for PBXNativeTarget "SmartMeetingsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F58E4D1D155EAF009663E8 /* Debug */,
+				19F58E4E1D155EAF009663E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19F58E161D155EAE009663E8 /* Project object */;
+}
