@@ -10,11 +10,11 @@ import UIKit
 import AVFoundation
 import UIKit
 import TextToSpeechV1
-import AVFoundation
 import SpeechToTextV1
 
 class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
+    @IBOutlet weak var ourWave: UIView!
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var startStopRecordingButton: UIButton!
     @IBOutlet weak var playRecordingButton: UIButton!
@@ -23,6 +23,8 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
     @IBOutlet weak var startStopStreamingCustomButton: UIButton!
     @IBOutlet weak var transcriptionField: UITextView!
     @IBOutlet weak var markerBtn: UIButton!
+    @IBOutlet weak var recordStopRecordingLabel: UILabel!
+
     
     var stt: SpeechToText?
     var player: AVAudioPlayer? = nil
@@ -36,6 +38,10 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
 
     var timer:NSTimer = NSTimer()
     
+    var waveformView:SCSiriWaveformView!
+    
+    
+    @IBOutlet weak var newWaveFormView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +81,18 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         
         instantiateSTT()
         
+        
+        
+        
 
+        
+
+    }
+    
+    func updateMeters() {
+        recorder.updateMeters()
+        let normalizedValue:CGFloat = pow(10, CGFloat(recorder.averagePowerForChannel(0))/20)
+        waveformView.updateWithLevel(normalizedValue)
     }
     
     func instantiateSTT() {
@@ -147,8 +164,6 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
     @IBAction func startStopRecording() {
         
         
-        
-        
         // ensure recorder is set up
         guard let recorder = recorder else {
             failure("Start/Stop Recording", message: "Recorder not properly set up.")
@@ -165,37 +180,73 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         
         if (recorder.recording) {
             markerBtn.hidden = false
-            timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(AudioRecodingVC.eachSec), userInfo: nil, repeats: true)
-            NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
-        }
+                    }
 
         
         // start/stop recording
         if (!recorder.recording) {
             do {
-                
                 markerBtn.hidden = true
                 let session = AVAudioSession.sharedInstance()
                 try session.setActive(true)
+                
+                timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(AudioRecodingVC.eachSec), userInfo: nil, repeats: true)
+                NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+
+                
                 recorder.record()
+                
+                
+                
+                
+                
+                //        Animations
+                
+                let bounds = newWaveFormView.bounds
+
+                
+                waveformView = SCSiriWaveformView(frame: CGRectMake(0, 0, bounds.width, bounds.height))
+                waveformView.waveColor = UIColor.whiteColor()
+                waveformView.primaryWaveLineWidth = 3.0
+                waveformView.secondaryWaveLineWidth = 1.0
+//                self.view.addSubview(waveformView)
+                newWaveFormView = waveformView
+                newWaveFormView.setNeedsDisplay()
+                
+                recorder.prepareToRecord()
+                recorder.meteringEnabled = true
+                recorder.record()
+                
+                let displayLink:CADisplayLink = CADisplayLink(target: self, selector: #selector(AudioRecodingVC.updateMeters))
+                displayLink.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
+                
+                
+                
                 startStopRecordingButton.setTitle("Stop Recording", forState: .Normal)
+                recordStopRecordingLabel.text = "End"
                 playRecordingButton.enabled = false
                 transcribeButton.enabled = false
                 
-                
-                
                 totalNumOfSec = 0
                 
-                timer.invalidate()
+                markerBtn.hidden = false
+
+
+
             } catch {
                 failure("Start/Stop Recording", message: "Error setting session active.")
             }
         } else {
             do {
                 
-//                timer.invalidate()
-                
+                timeLbl.text = String("00" + ":" + "00" + ":" +  "00")        //update flag
+                timer.invalidate()
+
                 recorder.stop()
+
+
+                recordStopRecordingLabel.text = "Record"
+
                 let session = AVAudioSession.sharedInstance()
                 try session.setActive(false)
                 startStopRecordingButton.setTitle("Start Recording", forState: .Normal)
@@ -247,9 +298,21 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
         }
         
         // transcribe recording
-        let settings = TranscriptionSettings(contentType: .WAV)
+        var settings = TranscriptionSettings(contentType: .WAV)
+        settings.continuous = true
+        settings.model = "en-US_BroadbandModel"
+        
         stt.transcribe(data, settings: settings, failure: failureData) { results in
             self.showResults(results)
+            var finalTransString = ""
+            for result in results {
+                finalTransString += " " + result.alternatives[0].transcript
+            }
+            transString = finalTransString
+
+            let alert = UIAlertView(title: "Summary", message: finalTransString, delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+            
         }
     }
     
@@ -311,7 +374,6 @@ class AudioRecodingVC: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerD
             }
         }
         
-        self.transcriptionField.text = text
     }
     
     func titleCase(s: String) -> String {

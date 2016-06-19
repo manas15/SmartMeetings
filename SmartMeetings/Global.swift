@@ -11,3 +11,4 @@ import Foundation
 var DataSource = [Recording]()
 var totalNumOfSec: Int = 0
 var lastMarker: Int = 0
+var transString = ""
